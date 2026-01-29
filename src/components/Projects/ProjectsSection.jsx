@@ -102,9 +102,7 @@ export default function ProjectsSection() {
           href="https://github.com/shahreyarhabibi"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 px-6 py-3 border-2 
-            border-(--primary) text-(--primary) rounded-full font-medium
-            transition-all duration-300 hover:bg-(--primary) hover:text-white"
+          className="inline-flex items-center gap-2 px-6 py-3 border-2 border-(--primary) text-(--primary) rounded-full font-medium transition-all duration-300 hover:bg-(--primary) hover:text-white"
         >
           View More on GitHub
           <FiGithub />

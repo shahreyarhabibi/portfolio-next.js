@@ -31,7 +31,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body suppressHydrationWarning>
+      <body>
         {/* Providers wraps children with client-side ThemeContext */}
         <Providers>{children}</Providers>
       </body>

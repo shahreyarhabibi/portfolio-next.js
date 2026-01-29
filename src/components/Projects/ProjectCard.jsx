@@ -45,8 +45,7 @@ export default function ProjectCard({ project }) {
               href={project.githubUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="p-3 bg-white/20 rounded-full backdrop-blur-sm 
-                hover:bg-(--primary) hover:scale-110 transition-all duration-300"
+              className="p-3 bg-white/20 rounded-full backdrop-blur-sm hover:bg-(--primary) hover:scale-110 transition-all duration-300"
               aria-label="View GitHub Repository"
             >
               <FiGithub className="text-white text-xl" />
@@ -57,8 +56,7 @@ export default function ProjectCard({ project }) {
               href={project.liveUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="p-3 bg-white/20 rounded-full backdrop-blur-sm 
-                hover:bg-(--primary) hover:scale-110 transition-all duration-300"
+              className="p-3 bg-white/20 rounded-full backdrop-blur-sm hover:bg-(--primary) hover:scale-110 transition-all duration-300"
               aria-label="View Live Site"
             >
               <FiExternalLink className="text-white text-xl" />
@@ -68,10 +66,7 @@ export default function ProjectCard({ project }) {
 
         {/* Featured badge */}
         {project.featured && (
-          <span
-            className="absolute top-3 right-3 px-3 py-1 text-xs font-semibold 
-            bg-(--primary) text-white rounded-full"
-          >
+          <span className="absolute top-3 right-3 px-3 py-1 text-xs font-semibold bg-(--primary) text-white rounded-full">
             Featured
           </span>
         )}
@@ -79,10 +74,7 @@ export default function ProjectCard({ project }) {
 
       {/* Project Info */}
       <div className="p-5">
-        <h3
-          className="text-xl font-bold text-(--text) mb-2 
-          group-hover:text-(--primary) transition-colors"
-        >
+        <h3 className="text-xl font-bold text-(--text) mb-2 group-hover:text-(--primary) transition-colors">
           {project.title}
         </h3>
 

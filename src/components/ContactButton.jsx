@@ -8,9 +8,9 @@ export default function ContactButton({ children, width, ...props }) {
     <a
       {...props}
       href="mailto:shahreyarhabibi@gmail.com"
-      className={`md:self-start ${width} inline-flex justify-center items-center 
-        border-2 text-(--primary) border-(--primary) rounded-full px-4 py-2 
-        transition-all duration-300 hover:bg-(--primary) hover:text-(--background)`}
+      className={`inline-flex items-center gap-2 px-6 py-3 border-2 
+            border-(--primary) text-(--primary) rounded-full font-medium
+            transition-all duration-300 hover:bg-(--primary) hover:text-white`}
     >
       {children}
     </a>
