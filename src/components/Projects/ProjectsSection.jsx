@@ -17,6 +17,7 @@ import { ThemeContext } from "@/context/ThemeContext";
 import { projects, allTechnologies } from "@/data/projects";
 import SectionTitles from "../SectionsTitle";
 import ProjectCard from "./ProjectCard";
+import { FiGithub } from "react-icons/fi";
 
 export default function ProjectsSection() {
   const { isLight } = useContext(ThemeContext);
@@ -34,7 +35,7 @@ export default function ProjectsSection() {
   return (
     <section
       id="projects"
-      className="flex flex-col md:w-290 m-auto gap-8 pt-20 pb-20"
+      className="flex flex-col md:w-350 m-auto gap-8 pt-20 pb-20"
     >
       {/* Section Title */}
       <SectionTitles title="My Projects" bg="bg-blue-500" />
@@ -55,7 +56,7 @@ export default function ProjectsSection() {
           All
         </button>
 
-        {allTechnologies.slice(0, 6).map((tech) => (
+        {allTechnologies.slice(0, 8).map((tech) => (
           <button
             key={tech}
             onClick={() => setActiveFilter(tech)}
@@ -112,6 +113,3 @@ export default function ProjectsSection() {
     </section>
   );
 }
-
-// Don't forget to import FiGithub at the top!
-import { FiGithub } from "react-icons/fi";

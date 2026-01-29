@@ -10,12 +10,12 @@
 
 "use client";
 
+import { AiOutlineCode } from "react-icons/ai";
 import { useContext } from "react";
 import Image from "next/image";
 import { BiSun, BiMoon } from "react-icons/bi";
 import { ThemeContext } from "@/context/ThemeContext";
 import NavIcons from "./NavIcons";
-import { FiFolder } from "react-icons/fi";
 
 // Icon imports - using @/icons alias
 import HomeIcon from "@/icons/HomeIcon";
@@ -28,7 +28,7 @@ export default function Header() {
   const { isLight, toggleTheme } = useContext(ThemeContext);
 
   return (
-    <header className="md:w-300 md:m-auto z-10">
+    <header className="md:w-350 md:m-auto z-10">
       <nav className="flex justify-center md:justify-between gap-50 items-center px-8 mt-6">
         {/* Logo - using next/image */}
         <Image
@@ -51,7 +51,8 @@ export default function Header() {
             link="#experience"
             Icon={ExperienceIcon}
           />
-          <NavIcons title="Projects" link="#projects" Icon={FiFolder} />
+          <NavIcons title="Projects" link="#projects" Icon={AiOutlineCode} />
+
           <NavIcons title="Services" link="#services" Icon={ServicesIcon} />
           <NavIcons title="Contact Me" link="#contact" Icon={ContactIcon} />
         </ul>

@@ -8,7 +8,7 @@ import { BsGithub } from "react-icons/bs";
 
 export default function Footer() {
   return (
-    <footer className="flex m-auto md:flex-row flex-col items-center gap-5 md:mb-2 mb-30 justify-between md:w-290 h-10">
+    <footer className="flex m-auto md:flex-row flex-col items-center gap-5 md:mb-5 mb-30 justify-between md:w-350 h-10">
       <p>
         © {new Date().getFullYear()} |{" "}
         <span className="text-(--text)">Ali Reza Habibi</span> | All Rights

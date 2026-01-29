@@ -18,15 +18,15 @@ export default function AboutSection() {
   return (
     <section
       id="about"
-      className="flex flex-col md:mt-10 md:w-290 m-auto items-center gap-10 md:gap-20 grow pt-20 pb-20"
+      className="flex flex-col md:mt-10 md:w-350 m-auto items-center gap-10 md:gap-20 grow pt-20 pb-20"
     >
-      <div className="md:w-200 md:mr-92">
+      <div className="md:w-235 md:mr-115">
         <SectionTitles
           title="About Me"
           underlinewidth="5%"
           bg="bg-(--primary-400)"
         />
-        <p className="text-lg">
+        <p className="text-lg ">
           With experience building responsive and engaging user interfaces, I
           specialize in front-end development. My work focuses on creating
           scalable solutions that balance performance, maintainability, and a
