@@ -1,25 +1,28 @@
-import { BsWordpress } from "react-icons/bs";
+/**
+ * TechnologiesIcons Component (Server)
+ * No hooks - pure presentational
+ */
+
+import { BsWordpress, BsGit, BsGithub } from "react-icons/bs";
 import { BiDotsHorizontalRounded } from "react-icons/bi";
-import { BsGit } from "react-icons/bs";
-import { BsGithub } from "react-icons/bs";
-import { SiNestjs } from "react-icons/si";
+import {
+  SiNestjs,
+  SiPostman,
+  SiTypescript,
+  SiFlutter,
+  SiTailwindcss,
+} from "react-icons/si";
 import { IoLogoJavascript } from "react-icons/io";
-import { SiPostman } from "react-icons/si";
-import { FaNodeJs } from "react-icons/fa";
-import { SiTypescript } from "react-icons/si";
-import { SiFlutter } from "react-icons/si";
+import { FaNodeJs, FaCss3Alt, FaPython, FaReact } from "react-icons/fa";
 import { AiFillHtml5 } from "react-icons/ai";
-import { FaCss3Alt } from "react-icons/fa";
-import { SiTailwindcss } from "react-icons/si";
-import { FaPython } from "react-icons/fa";
-import { FaReact } from "react-icons/fa";
 import { TbBrandNextjs } from "react-icons/tb";
 
 export default function TechnologiesIcons() {
   const style =
     "text-2xl text-zinc-500 hover:text-(--text) transition-all hover:scale-120";
+
   return (
-    <div className="flex gap-5 flex-wrap justify-center items-center ">
+    <div className="flex gap-5 flex-wrap justify-center items-center">
       <TbBrandNextjs className={style} title="NextJS" />
       <FaReact className={style} title="React" />
       <FaPython className={style} title="Python" />

@@ -1,9 +1,13 @@
+/**
+ * Experience Component (Server)
+ * Lists all work experience entries
+ */
+
 import ExperienceSections from "./ExperienceSections";
 
 export default function Experience() {
   return (
     <>
-      {/*Each Section*/}
       <ExperienceSections
         title="FirstRate Inc"
         year="Nov 2025 - Present"
@@ -21,7 +25,7 @@ export default function Experience() {
       <ExperienceSections
         title="Ulearna Technologies"
         year="Jun 2024 - May 2025"
-        description="Full-Stack Developer - Dubai, UAE "
+        description="Full-Stack Developer - Dubai, UAE"
         dotcolor="bg-(--color)"
         hidden="hidden"
         href="https://ulearna.com"
@@ -29,7 +33,7 @@ export default function Experience() {
       <ExperienceSections
         title="MOWJ Pty Ltd"
         year="Jan 2025 - Jun 2025"
-        description="WP Dev & Graphic Designer - Sydney, Australia "
+        description="WP Dev & Graphic Designer - Sydney, Australia"
         dotcolor="bg-(--color)"
         hidden="hidden"
         href="https://mowjglobal.com"

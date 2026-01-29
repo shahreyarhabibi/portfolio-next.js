@@ -1,15 +1,24 @@
+/**
+ * AboutSection Component (Client)
+ * ---------------------------------
+ * About Me section with globe background.
+ */
+
+"use client";
+
+import { useContext } from "react";
+import Image from "next/image";
+import { ThemeContext } from "@/context/ThemeContext";
 import SectionTitles from "./SectionsTitle";
 import DynamicTitle from "./DynamicTitle";
-import globeImage from "../assets/images/globe.webp";
-import { useContext } from "react";
-import { ThemeContext } from "../Context/ThemeContext";
 
 export default function AboutSection() {
   const { isLight } = useContext(ThemeContext);
+
   return (
     <section
       id="about"
-      className="    flex flex-col md:mt-10 md:w-290 m-auto items-center gap-10 md:gap-20 grow pt-20 pb-20"
+      className="flex flex-col md:mt-10 md:w-290 m-auto items-center gap-10 md:gap-20 grow pt-20 pb-20"
     >
       <div className="md:w-200 md:mr-92">
         <SectionTitles
@@ -34,15 +43,20 @@ export default function AboutSection() {
           with teams to deliver seamless digital experiences.
         </p>
       </div>
+
+      {/* Globe Background Image */}
       <div className="flex justify-center">
-        <img
+        <Image
+          src="/images/globe.webp"
+          alt="Decorative globe background"
+          width={600}
+          height={600}
           className={`absolute md:-mt-20 md:w-150 -z-50 ${
-            isLight ? "opacity-25" : "opacity-40"
+            isLight ? "opacity-30" : "opacity-20"
           }`}
-          src={globeImage}
-          alt="globe image"
         />
       </div>
+
       <DynamicTitle />
     </section>
   );

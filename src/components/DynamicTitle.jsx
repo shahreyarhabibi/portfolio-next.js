@@ -1,3 +1,10 @@
+/**
+ * DynamicTitle Component (Client)
+ * Added "use client" - required for react-type-animation
+ */
+
+"use client";
+
 import { TypeAnimation } from "react-type-animation";
 
 export default function DynamicTitle() {

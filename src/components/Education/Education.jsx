@@ -1,9 +1,13 @@
+/**
+ * Education Component (Server)
+ * Lists all education entries
+ */
+
 import EducationSections from "./EducationSections";
 
 export default function Education() {
   return (
     <>
-      {/*Each Section*/}
       <EducationSections
         title="Kabul University"
         year="2023 - 2025"
@@ -13,7 +17,7 @@ export default function Education() {
       <EducationSections
         title="Afghan Institute of Technology"
         year="2020 - 2022"
-        description="Diploma in Information Systems "
+        description="Diploma in Information Systems"
         dotcolor="bg-(--color)"
         hidden="hidden"
       />

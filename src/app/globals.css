@@ -1,26 +1,64 @@
+/* globals.css - Fixed for Next.js */
+
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* 
+ * Font files should be in: public/fonts/
+ * In Next.js, public folder is served at root "/"
+ */
+@font-face {
+  font-family: "Geist";
+  src: url("/fonts/Geist[wght].woff2") format("woff2-variations");
+  font-weight: 100 900;
+  font-display: swap;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
+  /* DARK MODE BY DEFAULT */
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    font-family: "Geist", sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+    color: #b3b3b3;
+
+    /* Dark theme variables (default) */
+    --background: #0d0d0d;
+    --text: #f9f9f9;
+    --primary: #0ec14c;
+    --primary-400: #56d482;
+    --secondary: #ffdb70;
+    --tertiary: #e36f33;
+    --color: #b3b3b3;
+    --navbarbackground: rgba(255, 255, 255, 0.05);
+    --navbarborder: rgba(255, 255, 255, 0.5);
+
+    width: 90%;
+    margin: auto;
+    scroll-behavior: smooth;
+  }
+
+  /* Apply background color to body */
+  body {
+    background-color: var(--background);
+    min-height: 100vh;
+  }
+
+  /* LIGHT MODE */
+  .light {
+    color: #6a7282;
+    --background: white;
+    --text: #0d0d0d;
+    --primary: #0ec14c;
+    --primary-400: #56d482;
+    --secondary: #ffdb70;
+    --tertiary: #e36f33;
+    --color: #6a7282;
+    --navbarbackground: rgba(24, 24, 27, 0.025);
+    --navbarborder: rgba(0, 0, 0, 0.1);
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+.hero-section-span {
+  color: var(--text);
+  font-weight: 600;
 }

@@ -1,8 +1,15 @@
+/**
+ * Service Component (Client)
+ * Uses useContext for theme styling
+ */
+
+"use client";
+
 import { useContext } from "react";
-import { ThemeContext } from "../../Context/ThemeContext";
+import { ThemeContext } from "@/context/ThemeContext";
 
 export default function Service({ title, description, icon: Icon, iconColor }) {
-  const { isLight } = useContext(ThemeContext); // <-- use context
+  const { isLight } = useContext(ThemeContext);
 
   return (
     <div
@@ -12,7 +19,6 @@ export default function Service({ title, description, icon: Icon, iconColor }) {
           : "bg-white/5 hover:bg-white/10 border border-teal-900 shadow-sm"
       } text-(--text) rounded-2xl p-4 md:p-8 transition-all duration-300`}
     >
-      {/* title */}
       <div className="flex gap-3 items-center">
         <Icon
           className={`relative p-2 w-12 h-12 flex items-center justify-center rounded-xl bg-white/5 ${iconColor}`}
