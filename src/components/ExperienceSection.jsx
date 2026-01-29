@@ -28,8 +28,8 @@ export default function ExperienceSection() {
       <a
         href="/resume.pdf"
         download
-        className="flex items-center justify-center text-center w-70 py-5 mt-10 
-          md:mt-20 md:w-60 border border-(--text) rounded-full md:py-2 text-(--text) 
+        className="flex items-center justify-center text-center w-70 mt-10 
+          md:mt-20 md:w-60 border border-(--text) rounded-full px-6 py-3 text-(--text) 
           font-semibold transition-all hover:bg-(--text) hover:text-(--background)"
       >
         Download Resume (CV)

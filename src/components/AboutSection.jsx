@@ -51,9 +51,11 @@ export default function AboutSection() {
           alt="Decorative globe background"
           width={600}
           height={600}
-          className={`absolute md:-mt-20 md:w-150 -z-50 ${
-            isLight ? "opacity-30" : "opacity-20"
-          }`}
+          className={`
+      absolute md:-mt-20 md:w-150 -z-50
+      ${isLight ? "opacity-30" : "opacity-20"}
+      drop-shadow-[0_0_40px_rgba(56,189,248,0.35)]
+    `}
         />
       </div>
 
