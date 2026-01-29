@@ -57,7 +57,7 @@ export default function ContactSection() {
   return (
     <section
       id="contact"
-      className="flex flex-col md:w-350 m-auto gap-8 pt-20 pb-20"
+      className="flex flex-col md:w-280 lg:w-300 xl:w-325 2xl:w-350 m-auto gap-8 pt-20 pb-20"
     >
       {/* Section Title */}
       <SectionTitles title="Get In Touch" bg="bg-red-900" />

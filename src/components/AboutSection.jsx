@@ -18,7 +18,7 @@ export default function AboutSection() {
   return (
     <section
       id="about"
-      className="flex flex-col md:mt-10 md:w-350 m-auto items-center gap-10 md:gap-20 grow pt-20 pb-20"
+      className="flex flex-col md:mt-10 md:w-280 lg:w-300 xl:w-325 2xl:w-350 m-auto items-center gap-10 md:gap-20 grow pt-20 pb-20"
     >
       <div className="md:w-235 md:mr-115">
         <SectionTitles
