@@ -17,18 +17,9 @@ export const projects = [
     githubUrl: "https://github.com/shahreyarhabibi/hesabi",
     featured: true,
   },
+
   {
     id: 2,
-    title: "MOWJ Technologies",
-    description:
-      "A full-service digital agency website delivering marketing, graphic design, and modern web development solutions.",
-    image: "/images/projects/taskapp.webp",
-    technologies: ["Wordpress", "Elementor", "PHP", "MySQL"],
-    liveUrl: "https:mowjglobal.com",
-    featured: true,
-  },
-  {
-    id: 3,
     title: "Portfolio Website",
     description:
       "A personal portfolio showcasing projects and skills with dark/light mode support.",
@@ -36,19 +27,33 @@ export const projects = [
     technologies: ["Next.js", "Tailwind", "Framer Motion"],
     liveUrl: "https://example.com",
     githubUrl: "https://github.com/username/project",
+    featured: true,
+  },
+
+  {
+    id: 3,
+    title: "Hospital Management System",
+    description:
+      "A simple and efficient system to manage patients, appointments, staff, and billing in hospitals or clinics.",
+    image: "/images/projects/hospital.webp",
+    technologies: ["CodeIgniter", "Bootstrap", "Chart.js"],
+    liveUrl: "https://habibihospital.great-site.net",
+    githubUrl:
+      "https://github.com/shahreyarhabibi/-Habibi-Hospital-Management-System",
     featured: false,
   },
+
   {
     id: 4,
-    title: "Weather Dashboard",
+    title: "MOWJ Technologies",
     description:
-      "Real-time weather app with location detection, forecasts, and beautiful visualizations.",
-    image: "/images/projects/weather.webp",
-    technologies: ["React", "OpenWeather API", "Chart.js"],
-    liveUrl: "https://example.com",
-    githubUrl: "",
+      "A full-service digital agency website delivering marketing, graphic design, and modern web development solutions.",
+    image: "/images/projects/taskapp.webp",
+    technologies: ["Wordpress", "Elementor", "PHP", "MySQL"],
+    liveUrl: "https:mowjglobal.com",
     featured: false,
   },
+
   {
     id: 5,
     title: "Mobile Fitness App",
