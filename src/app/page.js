@@ -13,21 +13,21 @@ import ServicesSection from "@/components/Services/ServicesSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 import BotpressChat from "@/components/BotpressChat";
+import ProjectsSection from "@/components/Projects/ProjectsSection";
 
 export default function Home() {
   return (
     <div>
       <Header />
-
       <main>
         <BotpressChat />
         <HeroSection />
         <AboutSection />
         <ExperienceSection />
+        <ProjectsSection />
         <ServicesSection />
         <ContactSection />
       </main>
-
       <Footer />
     </div>
   );

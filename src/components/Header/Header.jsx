@@ -15,6 +15,7 @@ import Image from "next/image";
 import { BiSun, BiMoon } from "react-icons/bi";
 import { ThemeContext } from "@/context/ThemeContext";
 import NavIcons from "./NavIcons";
+import { FiFolder } from "react-icons/fi";
 
 // Icon imports - using @/icons alias
 import HomeIcon from "@/icons/HomeIcon";
@@ -50,6 +51,7 @@ export default function Header() {
             link="#experience"
             Icon={ExperienceIcon}
           />
+          <NavIcons title="Projects" link="#projects" Icon={FiFolder} />
           <NavIcons title="Services" link="#services" Icon={ServicesIcon} />
           <NavIcons title="Contact Me" link="#contact" Icon={ContactIcon} />
         </ul>
