@@ -12,7 +12,7 @@ A modern, responsive portfolio website built with Next.js, featuring smooth anim
 
 [**View Live Demo →**](https://ahabibi.vercel.app)
 
-<img src="public/preview.png" alt="Portfolio Preview" width="800" />
+<img src="public/images/projects/portfolio.webp" alt="Portfolio Preview" width="800" />
 
 </div>
 
@@ -103,111 +103,121 @@ A modern, responsive portfolio website built with Next.js, featuring smooth anim
 
 2. **Install dependencies**
 
-```
-    npm install
-    # or
-    yarn install
-    # or
-    pnpm install
-```
+   ```
+       npm install
+       # or
+       yarn install
+       # or
+       pnpm install
+   ```
 
 3. **Set up environment variables**
 
-Create a .env.local file in the root directory:
+   Create a .env.local file in the root directory:
 
-```
-# Brevo (Sendinblue) Configuration
-BREVO_API_KEY=your_brevo_api_key_here
-SENDER_EMAIL=your_verified_sender_email
-SENDER_NAME=Portfolio Contact Form
-RECIPIENT_EMAIL=your_email@example.com
-```
+   ```
+   # Brevo (Sendinblue) Configuration
+   BREVO_API_KEY=your_brevo_api_key_here
+   SENDER_EMAIL=your_verified_sender_email
+   SENDER_NAME=Portfolio Contact Form
+   RECIPIENT_EMAIL=your_email@example.com
+   ```
 
 4. **Run the development server**
 
-```
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+   ```
+   npm run dev
+   # or
+   yarn dev
+   # or
+   pnpm dev
+   ```
 
 5. **Open your browser**
 
-Navigate to http://localhost:3000
+   Navigate to http://localhost:3000
 
 ## 📁 Project Structure
 
-```
-src/
-├── app/
-│   ├── api/
-│   │   └── contact/
-│   │       └── route.js        # Contact form API endpoint
-│   ├── globals.css             # Global styles & CSS variables
-│   ├── layout.js               # Root layout with metadata
-│   └── page.js                 # Home page
-│
-├── components/
-│   ├── Header/
-│   │   ├── Header.jsx          # Navigation header
-│   │   └── NavIcons.jsx        # Navigation icons
-│   │
-│   ├── Projects/
-│   │   ├── ProjectCard.jsx     # Individual project card
-│   │   └── ProjectsSection.jsx # Projects grid with filters
-│   │
-│   ├── Services/
-│   │   ├── Service.jsx         # Service card component
-│   │   ├── ServicesSection.jsx # Services grid
-│   │   └── TechnologiesIcons.jsx
-│   │
-│   ├── Education/
-│   │   ├── Education.jsx
-│   │   └── EducationSections.jsx
-│   │
-│   ├── Experience/
-│   │   ├── Experience.jsx
-│   │   └── ExperienceSections.jsx
-│   │
-│   ├── AboutSection.jsx
-│   ├── BotpressChat.jsx        # AI chatbot integration
-│   ├── ContactForm.jsx         # Contact form component
-│   ├── ContactSection.jsx      # Contact section layout
-│   ├── DynamicTitle.jsx
-│   ├── ExperienceSection.jsx
-│   ├── Footer.jsx
-│   ├── HeroSection.jsx
-│   ├── Providers.jsx           # Theme & toast providers
-│   └── SectionsTitle.jsx
-│
-├── context/
-│   └── ThemeContext.jsx        # Dark/light theme context
-│
-├── data/
-│   └── projects.js             # Projects data
-│
-└── icons/
-    ├── AboutIcon.jsx
-    ├── ExperienceIcon.jsx
-    ├── HomeIcon.jsx
-    ├── MailIcon.jsx
-    └── ServicesIcon.jsx
-
-```
+   ```
+   src/
+   ├── app/
+   │   ├── api/
+   │   │   └── contact/
+   │   │       └── route.js        # Contact form API endpoint
+   │   ├── globals.css             # Global styles & CSS variables
+   │   ├── layout.js               # Root layout with metadata
+   │   └── page.js                 # Home page
+   │
+   ├── components/
+   │   ├── Header/
+   │   │   ├── Header.jsx          # Navigation header
+   │   │   └── NavIcons.jsx        # Navigation icons
+   │   │
+   │   ├── Projects/
+   │   │   ├── ProjectCard.jsx     # Individual project card
+   │   │   └── ProjectsSection.jsx # Projects grid with filters
+   │   │
+   │   ├── Services/
+   │   │   ├── Service.jsx         # Service card component
+   │   │   ├── ServicesSection.jsx # Services grid
+   │   │   └── TechnologiesIcons.jsx
+   │   │
+   │   ├── Education/
+   │   │   ├── Education.jsx
+   │   │   └── EducationSections.jsx
+   │   │
+   │   ├── Experience/
+   │   │   ├── Experience.jsx
+   │   │   └── ExperienceSections.jsx
+   │   │
+   │   ├── AboutSection.jsx
+   │   ├── BotpressChat.jsx        # AI chatbot integration
+   │   ├── ContactForm.jsx         # Contact form component
+   │   ├── ContactSection.jsx      # Contact section layout
+   │   ├── DynamicTitle.jsx
+   │   ├── ExperienceSection.jsx
+   │   ├── Footer.jsx
+   │   ├── HeroSection.jsx
+   │   ├── Providers.jsx           # Theme & toast providers
+   │   └── SectionsTitle.jsx
+   │
+   ├── context/
+   │   └── ThemeContext.jsx        # Dark/light theme context
+   │
+   ├── data/
+   │   └── projects.js             # Projects data
+   │
+   └── icons/
+       ├── AboutIcon.jsx
+       ├── ExperienceIcon.jsx
+       ├── HomeIcon.jsx
+       ├── MailIcon.jsx
+       └── ServicesIcon.jsx
+   
+   ```
 
 ### 📸 Screenshots
 
 <div align="center">
-🌙 Dark Mode
+<strong>Dark Mode</strong>
+   <br/>
+   <br/>
 <img src="public/images/projects/portfolio.webp" alt="Dark Mode" width="700" />
-☀️ Light Mode
+   <br/>
+   <br/>
+<strong>Light Mode</strong>
+   <br/>
+   <br/>
 <img src="public/images/projects/portfolio-light.webp" alt="Light Mode" width="700" />
-📱 Mobile View
+   <br/>
+   <br/>
+<strong>Mobile View</strong>
+   <br/>
+   <br/>
 <img src="public/images/projects/portfolio-mobile.webp" alt="Mobile View" width="300" /></div>
 
-### 📬 Contact
+## 📬 Contact
 
 <div align="center">
 
@@ -238,6 +248,8 @@ This project is licensed under the **GNU Affero General Public License v3.0** - 
 <div align="center">
 ⭐ Star this repo if you found it helpful!
 <img src="https://img.shields.io/github/stars/shahreyarhabibi/portfolio-next.js?style=social" alt="GitHub Stars" />
+<br/>
+<br/>
 Made with ❤️ and ☕ by Ali Reza Habibi
 
 </div>
