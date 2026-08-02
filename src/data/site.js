@@ -43,8 +43,8 @@ export const SOCIAL_PROFILES = [
   // TODO: paste your real profile URLs here — these are the exact pages that
   // currently outrank your site, so naming them is what ties them back to you.
   { label: "Fiverr", url: "" },
-  { label: "Stack Overflow", url: "" },
-  { label: "Dev.to", url: "" },
+  { label: "Stack Overflow", url: "https://stackoverflow.com/users/30117659/ali-reza-habibi" },
+  { label: "Dev.to", url: "https://dev.to/ahabibidev" },
   { label: "Upwork", url: "" },
 ].filter((profile) => profile.url);
 
