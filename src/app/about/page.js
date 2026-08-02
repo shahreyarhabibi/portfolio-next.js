@@ -20,16 +20,19 @@ import SectionHeading from "@/components/ui/SectionHeading";
 import { aboutGraph } from "@/lib/schema";
 import {
   PERSON,
+  LOCATION,
   EXPERIENCE,
   EDUCATION,
   SOCIAL_PROFILES,
   SKILLS,
 } from "@/data/site";
+// Shared with the FAQPage structured data — see @/data/faq
+import { FAQ } from "@/data/faq";
 
 export const metadata = {
   title: "About Ali Reza Habibi (ahabibidev)",
   description:
-    "Ali Reza Habibi, known online as ahabibidev, is a Full-Stack Software Engineer with 3+ years of experience specializing in frontend development with React, Next.js, and TypeScript. Biography, work history, education, and contact details.",
+    "Ali Reza Habibi, known online as ahabibidev, is a Full-Stack Software Engineer based in Kabul, Afghanistan with 3+ years of experience specializing in frontend development with React, Next.js, and TypeScript. Biography, work history, education, and contact details.",
   alternates: { canonical: "/about" },
   openGraph: {
     type: "profile",
@@ -39,29 +42,6 @@ export const metadata = {
     url: "/about",
   },
 };
-
-const FAQ = [
-  {
-    question: "Who is Ali Reza Habibi?",
-    answer:
-      "Ali Reza Habibi, known online as ahabibidev, is a Full-Stack Software Engineer with 3+ years of professional experience. He specialises in frontend development with React, Next.js, and TypeScript, and currently works as a Software Engineer at FirstRate Inc.",
-  },
-  {
-    question: "What is ahabibidev?",
-    answer:
-      "ahabibidev is the username used by Ali Reza Habibi across GitHub, LinkedIn, X, and other developer platforms. His official website is ahabibi.dev — every ahabibidev profile you find online belongs to the same person.",
-  },
-  {
-    question: "What technologies does Ali Reza Habibi work with?",
-    answer:
-      "He works primarily with React, Next.js, TypeScript, JavaScript, Tailwind CSS, Node.js, and NestJS, and has additional experience with Flutter, PHP, Python, and WordPress.",
-  },
-  {
-    question: "How can I hire or contact Ali Reza Habibi?",
-    answer:
-      "You can reach him at contact@ahabibi.dev or through the contact form on this site. He is available worldwide for web, mobile, desktop, and WordPress development work.",
-  },
-];
 
 export default function AboutPage() {
   return (
@@ -78,7 +58,7 @@ export default function AboutPage() {
         <div className="flex flex-col-reverse md:flex-row gap-10 md:gap-16 items-start">
           <div className="flex flex-col gap-6 md:w-2/3">
             <PageHeader
-              eyebrow="Software Engineer"
+              eyebrow={`Software Engineer · ${LOCATION.label}`}
               title={`About ${PERSON.name}`}
             />
 
@@ -87,10 +67,12 @@ export default function AboutPage() {
                 <strong className="text-(--text)">Ali Reza Habibi</strong> —
                 known online as{" "}
                 <strong className="text-(--text)">ahabibidev</strong> — is a
-                Full-Stack Software Engineer with 3+ years of professional
-                experience, specialising in frontend development. He builds
-                seamless digital experiences across web, mobile, and desktop
-                using React, Next.js, and TypeScript.
+                Full-Stack Software Engineer based in{" "}
+                <strong className="text-(--text)">{LOCATION.label}</strong>,
+                with 3+ years of professional experience and a specialisation in
+                frontend development. He builds seamless digital experiences
+                across web, mobile, and desktop using React, Next.js, and
+                TypeScript, with PHP and Laravel on the backend.
               </p>
               <p>
                 He is currently a Software Engineer at{" "}

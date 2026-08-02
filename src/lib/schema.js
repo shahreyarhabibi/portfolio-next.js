@@ -11,6 +11,7 @@
 import {
   SITE_URL,
   PERSON,
+  LOCATION,
   SAME_AS,
   EMPLOYER,
   EDUCATION,
@@ -18,6 +19,7 @@ import {
   SKILLS,
 } from "@/data/site";
 import { projects } from "@/data/projects";
+import { FAQ } from "@/data/faq";
 
 // Stable node identifiers — these are what glue the graph together.
 export const PERSON_ID = `${SITE_URL}/#person`;
@@ -40,9 +42,22 @@ export function personNode() {
       caption: `${PERSON.name} — ${PERSON.jobTitle}`,
     },
     jobTitle: PERSON.jobTitle,
-    description:
-      "Full-Stack Software Engineer with 3+ years of experience specialising in frontend development with React, Next.js, and TypeScript.",
+    description: `Full-Stack Software Engineer based in ${LOCATION.label} with 3+ years of experience specialising in frontend development with React, Next.js, and TypeScript.`,
     email: `mailto:${PERSON.email}`,
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: LOCATION.city,
+      addressCountry: LOCATION.countryCode,
+    },
+    homeLocation: {
+      "@type": "Place",
+      name: LOCATION.label,
+      address: {
+        "@type": "PostalAddress",
+        addressLocality: LOCATION.city,
+        addressCountry: LOCATION.countryCode,
+      },
+    },
     knowsAbout: SKILLS,
     knowsLanguage: [
       { "@type": "Language", name: "English" },
@@ -177,7 +192,7 @@ export function homeGraph() {
       ...baseNodes(),
       profilePageNode({
         description:
-          "Portfolio of Ali Reza Habibi (ahabibidev), a Full-Stack Software Engineer specialising in frontend development with React, Next.js, and TypeScript.",
+          "Portfolio of Ali Reza Habibi (ahabibidev), a Full-Stack Software Engineer based in Kabul, Afghanistan, specialising in frontend development with React, Next.js, and TypeScript.",
       }),
       {
         "@type": "ItemList",
@@ -271,42 +286,18 @@ export function aboutGraph() {
         { name: "About", url },
       ]),
       {
+        // Built from @/data/faq so this markup can never drift from the text
+        // actually rendered on /about.
         "@type": "FAQPage",
         "@id": `${url}#faq`,
-        mainEntity: [
-          {
-            "@type": "Question",
-            name: "Who is Ali Reza Habibi?",
-            acceptedAnswer: {
-              "@type": "Answer",
-              text: "Ali Reza Habibi, known online as ahabibidev, is a Full-Stack Software Engineer with 3+ years of professional experience. He specialises in frontend development with React, Next.js, and TypeScript, and currently works as a Software Engineer at FirstRate Inc.",
-            },
+        mainEntity: FAQ.map((item) => ({
+          "@type": "Question",
+          name: item.question,
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: item.answer,
           },
-          {
-            "@type": "Question",
-            name: "What is ahabibidev?",
-            acceptedAnswer: {
-              "@type": "Answer",
-              text: "ahabibidev is the username used by Ali Reza Habibi across GitHub, LinkedIn, X, and other developer platforms. His official website is https://ahabibi.dev.",
-            },
-          },
-          {
-            "@type": "Question",
-            name: "What technologies does Ali Reza Habibi work with?",
-            acceptedAnswer: {
-              "@type": "Answer",
-              text: "He works primarily with React, Next.js, TypeScript, JavaScript, Tailwind CSS, Node.js, and NestJS, and has additional experience with Flutter, PHP, Python, and WordPress.",
-            },
-          },
-          {
-            "@type": "Question",
-            name: "How can I hire or contact Ali Reza Habibi?",
-            acceptedAnswer: {
-              "@type": "Answer",
-              text: "You can reach him at contact@ahabibi.dev or through the contact form at https://ahabibi.dev/#contact. He is available worldwide for web, mobile, desktop, and WordPress development work.",
-            },
-          },
-        ],
+        })),
       },
     ],
   };
@@ -324,7 +315,7 @@ export function persianGraph() {
         id: `${url}#webpage`,
         name: "علی رضا حبیبی — مهندس نرم‌افزار",
         description:
-          "علی رضا حبیبی (ahabibidev)، مهندس نرم‌افزار فول‌استک با تخصص در توسعه فرانت‌اند با React، Next.js و TypeScript.",
+          "علی رضا حبیبی (ahabibidev)، مهندس نرم‌افزار فول‌استک مقیم کابل، افغانستان با تخصص در توسعه فرانت‌اند با React، Next.js و TypeScript.",
         inLanguage: "fa",
       }),
     ],
