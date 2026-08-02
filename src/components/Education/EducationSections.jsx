@@ -25,9 +25,10 @@ export default function EducationSections({
       {/* Content */}
       <div className="flex ml-5 md:ml-8 flex-col gap-3">
         <div className="flex flex-row justify-between items-center">
-          <h2 className="text-md md:text-xl font-bold text-(--text)">
+          {/* h3: these sit under the "Education" h2 rendered by SectionTitles */}
+          <h3 className="text-md md:text-xl font-bold text-(--text)">
             {title}
-          </h2>
+          </h3>
           <p className="md:text-[16px] text-sm md:ml-4 md:mr-0 whitespace-nowrap">
             {year}
           </p>

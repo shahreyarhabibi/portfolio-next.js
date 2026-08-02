@@ -9,6 +9,7 @@
 
 import { useContext, useEffect, useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { ThemeContext } from "@/context/ThemeContext";
 import { FiGithub, FiExternalLink } from "react-icons/fi";
 
@@ -113,12 +114,25 @@ export default function ProjectCard({ project }) {
       {/* Project Info */}
       <div className="p-5">
         <h3 className="text-xl font-bold text-(--text) mb-2 group-hover:text-(--primary) transition-colors">
-          {project.title}
+          <Link
+            href={`/projects/${project.slug}`}
+            onClick={(event) => event.stopPropagation()}
+          >
+            {project.title}
+          </Link>
         </h3>
 
         <p className="text-(--color) text-sm md:text-base mb-4 line-clamp-2">
           {project.description}
         </p>
+
+        <Link
+          href={`/projects/${project.slug}`}
+          onClick={(event) => event.stopPropagation()}
+          className="inline-block mb-4 text-sm font-medium text-(--primary) hover:underline"
+        >
+          Read the case study →
+        </Link>
 
         {/* Technologies */}
         <div className="flex flex-wrap gap-2">

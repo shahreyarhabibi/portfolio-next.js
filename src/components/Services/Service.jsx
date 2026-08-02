@@ -23,7 +23,9 @@ export default function Service({ title, description, icon: Icon, iconColor }) {
         <Icon
           className={`relative p-1.5 md:p-2 md:w-12 md:h-12 w-9 h-9 flex items-center justify-center rounded-xl bg-white/5 ${iconColor}`}
         />
-        <h1 className="font-bold md:text-xl text-base">{title}</h1>
+        {/* h3, not h1 — the page already has one h1 (the name in the hero),
+            and the service cards sit under the "What i'm doing" h2. */}
+        <h3 className="font-bold md:text-xl text-base">{title}</h3>
       </div>
       <p className="mt-3 md:text-base text-sm text-(--color)">{description}</p>
     </div>

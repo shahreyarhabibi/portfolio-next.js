@@ -10,14 +10,7 @@ import { useContext } from "react";
 import { ThemeContext } from "@/context/ThemeContext";
 import ContactForm from "./ContactForm";
 import SectionTitles from "./SectionsTitle";
-import {
-  FiMail,
-  FiMapPin,
-  FiGithub,
-  FiLinkedin,
-  FiInstagram,
-  FiTwitter,
-} from "react-icons/fi";
+import { FiMail, FiMapPin, FiGithub, FiLinkedin, FiTwitter } from "react-icons/fi";
 
 export default function ContactSection() {
   const { isLight } = useContext(ThemeContext);
@@ -129,7 +122,7 @@ export default function ContactSection() {
                   key={index}
                   href={social.href}
                   target="_blank"
-                  rel="noopener noreferrer"
+                  rel="me noopener noreferrer"
                   aria-label={social.label}
                   className={`
                     p-4 rounded-full transition-all duration-300

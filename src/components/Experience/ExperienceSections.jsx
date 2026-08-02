@@ -33,9 +33,10 @@ export default function ExperienceSections({
       {/* Content */}
       <div className="flex ml-5 md:ml-8 flex-col gap-1">
         <div className="flex flex-row justify-between items-center">
-          <a href={href} className="text-md md:text-xl font-bold text-(--text)">
-            {title}
-          </a>
+          {/* h3: mirrors the Education column and sits under the "Experience" h2 */}
+          <h3 className="text-md md:text-xl font-bold text-(--text)">
+            {href ? <a href={href}>{title}</a> : title}
+          </h3>
           <p className="whitespace-nowrap md:text-[16px] text-sm md:ml-4 md:mr-0">
             {year}
           </p>

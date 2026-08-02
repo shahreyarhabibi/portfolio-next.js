@@ -21,7 +21,7 @@ export default function HeroSection() {
 
   return (
     <section
-      id="#"
+      id="home"
       className="flex-col md:w-full md:max-w-350 m-auto flex justify-between md:flex-row md:mt-20 mt-10 items-center md:gap-20 gap-10"
     >
       {/* Left Content */}
@@ -75,18 +75,27 @@ export default function HeroSection() {
 
         {/* Social Links */}
         <div className="flex gap-5 mt-5">
-          <a aria-label="Send me an Email" href="mailto:contact@ahabibi.dev">
+          {/* rel="me" marks these as the same identity as this site */}
+          <a
+            aria-label="Send me an Email"
+            href="mailto:contact@ahabibi.dev"
+            rel="me"
+          >
             <FaRegEnvelope className="text-(--text) text-xl" />
           </a>
           <a
             aria-label="Visit my LinkedIn Profile"
-            href="https://linkedin.com/in/ahabibidev"
+            href="https://www.linkedin.com/in/ahabibidev"
+            rel="me noopener noreferrer"
+            target="_blank"
           >
             <FaLinkedinIn className="text-(--text) text-xl" />
           </a>
           <a
             aria-label="Visit my GitHub Profile"
             href="https://github.com/ahabibidev"
+            rel="me noopener noreferrer"
+            target="_blank"
           >
             <BsGithub className="text-(--text) text-xl" />
           </a>
