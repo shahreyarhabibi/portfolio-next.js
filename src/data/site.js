@@ -28,6 +28,23 @@ export const PERSON = {
 };
 
 /**
+ * Where he is based.
+ *
+ * Stated explicitly because assistants were otherwise inferring it from
+ * "Kabul University" and "Kabul Office" — an unstated fact gets guessed, and a
+ * guess can just as easily land on the wrong city.
+ */
+export const LOCATION = {
+  city: "Kabul",
+  country: "Afghanistan",
+  countryCode: "AF",
+  label: "Kabul, Afghanistan",
+  labelFa: "کابل، افغانستان",
+  availability: "Available worldwide",
+  availabilityFa: "آماده همکاری در سراسر جهان",
+};
+
+/**
  * Every profile that represents the SAME person.
  *
  * This list is how Google merges "ahabibidev on GitHub", "ahabibidev on Fiverr"
@@ -118,6 +135,7 @@ export const SKILLS = [
   "Tailwind CSS",
   "Flutter",
   "PHP",
+  "Laravel",
   "Python",
   "WordPress",
   "Frontend Development",
