@@ -1,13 +1,32 @@
 import { Analytics } from "@vercel/analytics/next";
+import { Vazirmatn } from "next/font/google";
 import Providers from "@/components/Providers";
 import "./globals.css";
-import JsonLd from "./json-ld";
+import { SITE_URL } from "@/data/site";
+
+/**
+ * Persian webfont. next/font self-hosts this at build time, so there is no
+ * runtime request to Google and no CSP entry needed. Applied via the
+ * [lang="fa"] rule in globals.css.
+ */
+const vazirmatn = Vazirmatn({
+  subsets: ["arabic"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-vazirmatn",
+  display: "swap",
+});
 
 export const metadata = {
-  // ✅ Title — put your name FIRST (most important for name searches)
-  title: "Ali Reza Habibi — Software Engineer | Full-Stack Developer",
+  metadataBase: new URL(SITE_URL),
+
+  // Name first, then the username people actually search for. Sub-pages append
+  // to this via the template.
+  title: {
+    default: "Ali Reza Habibi (ahabibidev) — Software Engineer",
+    template: "%s | Ali Reza Habibi",
+  },
   description:
-    "Ali Reza Habibi — Full-Stack Software Engineer with 3+ years of experience specializing in Frontend development. Building seamless digital experiences across web, mobile, and desktop using React, Next.js, and TypeScript.",
+    "Official site of Ali Reza Habibi (ahabibidev) — Full-Stack Software Engineer with 3+ years of experience specializing in frontend development. Building seamless digital experiences across web, mobile, and desktop using React, Next.js, and TypeScript.",
 
   keywords: [
     "Ali Reza Habibi",
@@ -15,21 +34,46 @@ export const metadata = {
     "ahabibi.dev",
     "علی رضا حبیبی",
     "علی‌رضا حبیبی",
-    "علی رضا هبیبی",
     "Software Engineer",
     "Full-Stack Developer",
     "Frontend Developer",
+    "React Developer",
+    "Next.js Developer",
+    "Ali Reza Habibi Developer",
   ],
 
   applicationName: "Ali Reza Habibi",
-  authors: [{ name: "Ali Reza Habibi", url: "https://ahabibi.dev/" }],
+  authors: [{ name: "Ali Reza Habibi", url: SITE_URL }],
   creator: "Ali Reza Habibi",
   publisher: "Ali Reza Habibi",
+  category: "technology",
 
-  // ✅ Canonical URL — prevents duplicate content issues
+  // ✅ Canonical + language alternates (hreflang)
   alternates: {
-    canonical: "https://ahabibi.dev/",
+    canonical: SITE_URL,
+    languages: {
+      en: SITE_URL,
+      fa: `${SITE_URL}/fa`,
+      "x-default": SITE_URL,
+    },
   },
+
+  // ✅ Explicit crawl directives. max-image-preview:large is what makes Google
+  // show your photo/thumbnail in results and AI Overviews instead of nothing.
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
+
+  // Add your Search Console HTML-tag token here if you are not verified by DNS.
+  // verification: { google: "your-token" },
 
   icons: {
     shortcut: "/favicon.ico",
@@ -45,16 +89,20 @@ export const metadata = {
 
   // ✅ Open Graph (Facebook, LinkedIn, etc.)
   openGraph: {
-    title: "Ali Reza Habibi — Software Engineer",
+    title: "Ali Reza Habibi (ahabibidev) — Software Engineer",
     description:
       "Full-Stack Software Engineer with 3+ years of experience specializing in Frontend development.",
-    type: "website",
-    url: "https://ahabibi.dev/",
+    type: "profile",
+    firstName: "Ali Reza",
+    lastName: "Habibi",
+    username: "ahabibidev",
+    url: `${SITE_URL}/`,
     siteName: "Ali Reza Habibi",
     locale: "en_US",
+    alternateLocale: ["fa_IR"],
     images: [
       {
-        url: "https://ahabibi.dev/og-image.png", // ← CREATE THIS (1200x630px)
+        url: "/og-image.png",
         width: 1200,
         height: 627,
         alt: "Ali Reza Habibi — Software Engineer",
@@ -65,20 +113,17 @@ export const metadata = {
   // ✅ Twitter Card
   twitter: {
     card: "summary_large_image",
-    title: "Ali Reza Habibi — Software Engineer",
+    title: "Ali Reza Habibi (ahabibidev) — Software Engineer",
     description:
       "Full-Stack Software Engineer with 3+ years of experience specializing in Frontend development.",
-    images: ["https://ahabibi.dev/og-image.png"],
-    creator: "@ahabibidev", // ← replace if you have one
+    images: ["/og-image.png"],
+    creator: "@ahabibidev",
   },
-
-  // ✅ Tell Google this is YOUR personal page
-  metadataBase: new URL("https://ahabibi.dev/"),
 };
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" className={vazirmatn.variable} suppressHydrationWarning>
       <head>
         <script
           dangerouslySetInnerHTML={{
@@ -96,7 +141,6 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body>
-        <JsonLd />
         <Providers>{children}</Providers>
         <Analytics />
       </body>
