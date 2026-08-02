@@ -25,7 +25,9 @@ export default function ContactSection() {
     {
       icon: FiMapPin,
       label: "Location",
-      value: "Available Worldwide",
+      // Naming the city matters: assistants were inferring it from context
+      // rather than reading it, and an inferred city can be the wrong one.
+      value: "Kabul, Afghanistan · Available worldwide",
       href: null,
     },
   ];

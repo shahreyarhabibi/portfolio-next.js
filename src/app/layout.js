@@ -26,7 +26,7 @@ export const metadata = {
     template: "%s | Ali Reza Habibi",
   },
   description:
-    "Official site of Ali Reza Habibi (ahabibidev) — Full-Stack Software Engineer with 3+ years of experience specializing in frontend development. Building seamless digital experiences across web, mobile, and desktop using React, Next.js, and TypeScript.",
+    "Official site of Ali Reza Habibi (ahabibidev) — Full-Stack Software Engineer based in Kabul, Afghanistan with 3+ years of experience specializing in frontend development. Building seamless digital experiences across web, mobile, and desktop using React, Next.js, and TypeScript.",
 
   keywords: [
     "Ali Reza Habibi",

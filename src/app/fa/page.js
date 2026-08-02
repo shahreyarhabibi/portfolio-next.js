@@ -37,7 +37,7 @@ export const metadata = {
     absolute: "علی رضا حبیبی (ahabibidev) — مهندس نرم‌افزار",
   },
   description:
-    "علی رضا حبیبی، مشهور به ahabibidev، مهندس نرم‌افزار فول‌استک با بیش از ۳ سال تجربه و متخصص در توسعه فرانت‌اند با React، Next.js و TypeScript. وب‌سایت رسمی، نمونه‌کارها و راه‌های تماس.",
+    "علی رضا حبیبی، مشهور به ahabibidev، مهندس نرم‌افزار فول‌استک مقیم کابل، افغانستان با بیش از ۳ سال تجربه و متخصص در توسعه فرانت‌اند با React، Next.js و TypeScript. وب‌سایت رسمی، نمونه‌کارها و راه‌های تماس.",
   alternates: {
     canonical: `${SITE_URL}/fa`,
     languages: {
@@ -209,7 +209,8 @@ export default function PersianPage() {
 
             <p className="md:text-xl text-base md:w-5/6">
               <span className="hero-section-span">مهندس نرم‌افزار فول‌استک</span>{" "}
-              با بیش از <span className="hero-section-span">۳ سال</span> تجربه،
+              مقیم <span className="hero-section-span">کابل، افغانستان</span> با
+              بیش از <span className="hero-section-span">۳ سال</span> تجربه،
               متخصص در <span className="hero-section-span">فرانت‌اند</span> و
               ساخت تجربه‌های دیجیتال یکپارچه برای وب، موبایل و دسکتاپ.
             </p>
@@ -251,7 +252,9 @@ export default function PersianPage() {
               توسعه‌دهنده فول‌استک در دبی و توسعه‌دهنده وردپرس در سیدنی بوده است.
             </p>
             <p>
-              وب‌سایت رسمی او{" "}
+              او مقیم <strong className="text-(--text)">کابل، افغانستان</strong>{" "}
+              است و برای پروژه‌های دورکاری با کارفرمایان سراسر جهان همکاری
+              می‌کند. وب‌سایت رسمی او{" "}
               <strong className="text-(--text)">ahabibi.dev</strong> است و همین
               نام کاربری را در گیت‌هاب، لینکدین و سایر پلتفرم‌ها استفاده می‌کند.
             </p>
